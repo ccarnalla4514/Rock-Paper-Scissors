@@ -9,11 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+@IBOutlet weak var computersChoice: UILabel!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func whenPieceIsTapped(_ sender: UITapGestureRecognizer) {
+  
+    }
+    
 }
 
