@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,76 +16,138 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fqC-Q7-gvs">
-                                <rect key="frame" x="-5" y="242" width="425" height="128"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AbQ-hQ-huR">
+                                <rect key="frame" x="10" y="44" width="394" height="818"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="depositphotos_1888666-stock-photo-large-rock-stone-isolated" translatesAutoresizingMaskIntoConstraints="NO" id="jIl-W3-3kn">
-                                        <rect key="frame" x="0.0" y="0.0" width="131" height="128"/>
+                                    <view contentMode="scaleToFill" id="sQB-W5-6IA">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <viewLayoutGuide key="safeArea" id="7Sc-I0-LcZ"/>
+                                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5xO-1V-nbg" userLabel="Pieces">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock" translatesAutoresizingMaskIntoConstraints="NO" id="Aih-hA-n6f" userLabel="Rock">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="200"/>
+                                                <gestureRecognizers/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paper" translatesAutoresizingMaskIntoConstraints="NO" id="ite-a5-9Ob" userLabel="Paper">
+                                                <rect key="frame" x="131.5" y="0.0" width="131" height="200"/>
+                                                <gestureRecognizers/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scissors" translatesAutoresizingMaskIntoConstraints="NO" id="Irp-pf-rRo" userLabel="Scissors">
+                                                <rect key="frame" x="262.5" y="0.0" width="131.5" height="200"/>
+                                                <gestureRecognizers/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="131" id="DwA-Wd-XiS"/>
-                                            <constraint firstAttribute="height" constant="128" id="jBZ-yc-TMn"/>
+                                            <constraint firstAttribute="width" constant="394" id="diF-gZ-eMY"/>
+                                            <constraint firstAttribute="height" constant="200" id="sHO-8U-pay"/>
                                         </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="34323301" translatesAutoresizingMaskIntoConstraints="NO" id="6ig-s5-ehI">
-                                        <rect key="frame" x="147" y="0.0" width="131" height="128"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="o8N-zv-9c7" appends="YES" id="UwN-SO-A5Q"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rZh-aC-tKZ">
+                                        <rect key="frame" x="0.0" y="200" width="394" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Rock!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-Sl-Q2B" userLabel="Pick Rock!">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="20.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Pick Paper!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJa-oX-Dgb" userLabel="No Pick Paper!">
+                                                <rect key="frame" x="131.5" y="0.0" width="131" height="20.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scissors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtT-a0-jK2" userLabel="Pick Me If You Want">
+                                                <rect key="frame" x="262.5" y="0.0" width="131.5" height="20.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JoM-ys-RWQ" userLabel="Pieces picked">
+                                        <rect key="frame" x="0.0" y="220.5" width="394" height="547.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Picked..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ga2-aV-M9V">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="137"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="41"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yl7-R4-V2L">
+                                                <rect key="frame" x="0.0" y="137" width="394" height="137"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="394" id="VNs-tX-5GC"/>
+                                                    <constraint firstAttribute="height" constant="150" id="cVS-YT-Mk0"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Picked..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuc-Zs-aHE">
+                                                <rect key="frame" x="0.0" y="274" width="394" height="136.5"/>
+                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="31"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rft-aL-S3I">
+                                                <rect key="frame" x="0.0" y="410.5" width="394" height="137"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="394" id="gNr-xG-Ep5"/>
+                                                    <constraint firstAttribute="height" constant="150" id="iz4-t2-oVI"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="28v-vQ-IXH">
+                                        <rect key="frame" x="0.0" y="768" width="394" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="131" id="hfK-7H-Fbg"/>
+                                            <constraint firstAttribute="height" constant="50" id="KFB-qq-XBG"/>
                                         </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="istockphoto-1084212654-612x612" translatesAutoresizingMaskIntoConstraints="NO" id="ufW-Vd-Z69">
-                                        <rect key="frame" x="294" y="0.0" width="131" height="128"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="131" id="udT-Oj-Wds"/>
-                                        </constraints>
-                                    </imageView>
+                                    </stackView>
                                 </subviews>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="lZj-HB-U5k" appends="YES" id="MX2-At-LgA"/>
-                                </connections>
+                                <constraints>
+                                    <constraint firstItem="5xO-1V-nbg" firstAttribute="leading" secondItem="AbQ-hQ-huR" secondAttribute="leading" id="GhY-V9-25q"/>
+                                    <constraint firstAttribute="trailing" secondItem="5xO-1V-nbg" secondAttribute="trailing" id="J27-g6-YL7"/>
+                                    <constraint firstItem="5xO-1V-nbg" firstAttribute="top" secondItem="AbQ-hQ-huR" secondAttribute="top" id="R1p-xK-Z66"/>
+                                    <constraint firstItem="rZh-aC-tKZ" firstAttribute="leading" secondItem="AbQ-hQ-huR" secondAttribute="leading" id="hMM-Te-Iiw"/>
+                                    <constraint firstAttribute="trailing" secondItem="rZh-aC-tKZ" secondAttribute="trailing" id="x1g-PL-Jrf"/>
+                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick one!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfA-YM-jEP">
-                                <rect key="frame" x="149" y="167" width="116" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rock Paper Scissors!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLS-ml-JOf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="46"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Computers Choice)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVK-YS-s8j">
-                                <rect key="frame" x="72" y="633" width="271" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Computer Picked..." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lH-pj-fZz">
-                                <rect key="frame" x="130" y="438" width="154" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AbQ-hQ-huR" secondAttribute="trailing" constant="10" id="Fdo-Xf-hnF"/>
+                            <constraint firstItem="AbQ-hQ-huR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mid-3A-bWp"/>
+                            <constraint firstItem="AbQ-hQ-huR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Y4M-pz-UCW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AbQ-hQ-huR" secondAttribute="bottom" id="s0s-Av-FTV"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="computersChoice" destination="CVK-YS-s8j" id="Us4-CF-qZD"/>
+                        <outlet property="computerImage" destination="rft-aL-S3I" id="7oF-Jg-fs4"/>
+                        <outlet property="pieceStackView" destination="5xO-1V-nbg" id="138-aN-aUI"/>
+                        <outlet property="playerImage" destination="Yl7-R4-V2L" id="shG-80-fw3"/>
+                        <outletCollection property="imageViews" destination="Aih-hA-n6f" collectionClass="NSMutableArray" id="oWN-pI-6bj"/>
+                        <outletCollection property="imageViews" destination="ite-a5-9Ob" collectionClass="NSMutableArray" id="P2M-xd-KUq"/>
+                        <outletCollection property="imageViews" destination="Irp-pf-rRo" collectionClass="NSMutableArray" id="oLh-7m-2Dq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="lZj-HB-U5k">
+                <tapGestureRecognizer id="o8N-zv-9c7">
                     <connections>
-                        <action selector="whenPieceIsTapped:" destination="BYZ-38-t0r" id="L2S-iX-PTs"/>
+                        <action selector="whenTappedOnPiece:" destination="BYZ-38-t0r" id="HPl-VJ-v68"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -93,14 +155,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="34323301" width="1000" height="1000"/>
-        <image name="depositphotos_1888666-stock-photo-large-rock-stone-isolated" width="1024" height="763"/>
-        <image name="istockphoto-1084212654-612x612" width="612" height="408"/>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="Paper" width="1000" height="1000"/>
+        <image name="Rock" width="1024" height="763"/>
+        <image name="Scissors" width="612" height="408"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
