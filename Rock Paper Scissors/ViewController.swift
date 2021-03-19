@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SafariServices
+
 class ViewController: UIViewController {
 
 @IBOutlet var tapGesture: UITapGestureRecognizer!
@@ -18,10 +20,12 @@ class ViewController: UIViewController {
 @IBOutlet weak var computerImage: UIImageView!
     
 @IBOutlet var imageViews: [UIImageView]!
+   
     var yourPick = -1
     
     var images: [UIImage] = []
-    
+     
+    let url = URL(string: "https://www.considerable.com/entertainment/games/rock-paper-scissors/")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +38,17 @@ class ViewController: UIViewController {
     
     }
  
+  
+    @IBAction func whenButtonPressed(_ sender: Any) {
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+    
+    
+    
+    }
+    
+    
+    
+    
     @IBAction func whenTappedOnPiece(_ sender: UITapGestureRecognizer) {
     
     let selectedPoint = sender.location(in: pieceStackView)
